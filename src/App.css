@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: aqua;
   
 }
 .container{
@@ -7,8 +8,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 img{
   height: 10rem;
   width: 20rem ;
+  border-radius: 1rem;
+}
+.Card{
+  border: 2px solid blue !important;
 }
