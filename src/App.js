@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
 
+
+
+
+
+
+
 let data = [
   {
     product: "Pen",
@@ -32,8 +38,8 @@ function App() {
   
   return (
     <div className="App">
-      <div className="title">Heading</div>
-      <div>Cart Count {"c"} </div>
+      <h1 className="title">Welcome to Noorul's Shop</h1>
+      <h2 className='count'>Your Cart Count is {"c"} </h2>
       <div className='container'>
      {   data.map((each,id)=>(
              <Card key={id} name={each.product} amount={each.amount}  link = {each.url}/>
@@ -46,7 +52,6 @@ function App() {
 }
 
 function Card(props) {
-
   let [show, setShow] = useState(true);
   let [count, setCount] = useState(0);
   function button() {
@@ -55,21 +60,18 @@ function Card(props) {
  //   console.log(show)
   if(show == true){
     count++
- 
   }
   else{
     count-- 
-   
   }
              setCount(count)
-
   }
   return(
     <div className="Card">
       <img src= {props.link}/>
-      <div className='name'>{props.name}</div>
-      <div className='amount'>{props.amount}</div>
-     {show ? (<button className='btn' onClick={()=> button()} >Add to cart</button>) :  (<button className='btn' onClick={()=> button()}>Remove form cart</button>)}
+      <div className='name size'>{props.name}</div>
+      <div className='amount size'>{props.amount}</div>
+     {show ? (<button className='btn size' onClick={()=> button()} >Add to cart</button>) :  (<button className='btn size' onClick={()=> button()}>Remove form cart</button>)}
    
     </div>
   )

@@ -1,7 +1,19 @@
+body{
+  background-color: black;
+  color: greenyellow;
+}
 .App {
   text-align: center;
-  background-color: aqua;
-  
+ 
+}
+.size{
+  font-size: larger;
+}
+.btn{
+  border-radius: 5rem;
+  background-color: coral;
+  width: 12rem;
+  color: whitesmoke;
 }
 .container{
   display: flex;
@@ -9,12 +21,53 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 img{
   height: 10rem;
   width: 20rem ;
   border-radius: 1rem;
 }
-.Card{
-  border: 2px solid blue !important;
+/* .Card{
+   border: 2px solid whitesmoke !important; 
+}  */
+.Card:hover{
+box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
+}
+.title{
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: title;
+  letter-spacing: 0.5rem;
+}
+.count{
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: count;
+}
+@keyframes title {
+  from {
+    color: green;
+  }
+
+  to {
+   
+   text-align: center;
+    color: pink;
+
+  }
+}
+@keyframes count {
+  from {
+    margin-left : 100%;
+    width: 300%;
+    color: coral;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+    color: aliceblue;
+
+  }
 }
