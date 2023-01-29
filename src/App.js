@@ -56,7 +56,7 @@ function Card() {
     document.getElementById(tempAmount).disabled = false;
   };
   const handleRemove = (product, amount) => {
-    if (document.getElementById(product).disabled == true) {
+    if (document.getElementById(product).disabled === true) {
       setCount(count - 1);
       var tempProduct = product;
       var tempAmount = amount;
