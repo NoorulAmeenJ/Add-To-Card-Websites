@@ -38,14 +38,14 @@ img {
   box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
 }
 .title {
-  /* animation-duration: 3s; */
-  /* animation-iteration-count: infinite; */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
   animation-name: title;
   letter-spacing: 0.5rem;
 }
 .count {
-  /* animation-duration: 5s; */
-  /* animation-iteration-count: infinite; */
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
   animation-name: count;
 }
 @keyframes title {
