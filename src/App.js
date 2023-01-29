@@ -73,7 +73,7 @@ function Card() {
       <div className="item">
         {data.map((each, idx) => (
           <div className="Card" key={idx}>
-            <img src={each.url} />
+            <img src={each.url} alt={each.product} />
             <div className="name size">{each.product}</div>
             <div className="amount size">{each.amount}</div>
             <button
