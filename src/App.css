@@ -9,17 +9,20 @@ body{
 .size{
   font-size: larger;
 }
+.add{
+  width: 7rem !important;
+}
 .btn{
   border-radius: 5rem;
   background-color: coral;
-  width: 12rem;
+  width: 11rem;
   color: whitesmoke;
 }
 .btn:hover{
   color: coral;
   background-color: whitesmoke;
 }
-.container{
+.item{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,21 +35,18 @@ img{
   width: 20rem ;
   border-radius: 1rem;
 }
-/* .Card{
-   border: 2px solid whitesmoke !important; 
-}  */
 .Card:hover{
 box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
 }
 .title{
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  /* animation-duration: 3s; */
+  /* animation-iteration-count: infinite; */
   animation-name: title;
   letter-spacing: 0.5rem;
 }
 .count{
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  /* animation-duration: 5s; */
+  /* animation-iteration-count: infinite; */
   animation-name: count;
 }
 @keyframes title {

@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
 
 
+function App() {
+  
+  return (
+    <div className="App">
+        <Card/>
+    </div>
+  );
+}
 
-
-
-
+export default App;
 
 let data = [
   { 
@@ -38,49 +43,50 @@ let data = [
     url: "https://m.media-amazon.com/images/I/71hqiAbTgeL._SX355_.jpg"
   },
 ]
- 
-function App() {
-  
-  return (
-    <div className="App">
-      <h1 className="title">Welcome to Noorul's Shop</h1>
-      <h2 className='count'>Your Cart Count is {"c"} </h2>
-      <div className='container'>
-     {   data.map((each,id)=>(
-              
-             <Card key={id} keys={each.id} name={each.product} amount={each.amount}  link = {each.url}/>
-     ))
-}         
-               
-      </div>
-    </div>
-  );
-}
 
-function Card(props) {
-  let [show, setShow] = useState(true);
+function Card() {
+
+
   let [count, setCount] = useState(0);
  
-  var button = (number) => {
 
-    setShow(!show);
-    setCount(count + +number) ;
-//  console.log(answer)
-console.log(count)
-    
+  const handleAdd = (product,amount) => {
+    setCount(count+1)
+    var tempProduct = product
+    var tempAmount = amount
+    console.log(tempProduct,tempAmount)
+    document.getElementById(tempProduct).disabled = true
+    document.getElementById(tempAmount).disabled = false
   }
-
-  
+  const handleRemove = (product,amount) => {
+    if(document.getElementById(product).disabled == true){ 
+    setCount(count-1)
+    var tempProduct = product
+    var tempAmount = amount
+     console.log(tempProduct,tempAmount)
+     document.getElementById(tempProduct).disabled = false
+     document.getElementById(tempAmount).disabled = true
+    }
+  }
   return(
-    <div className="Card">
-      <img src= {props.link}/>
-      <div className='name size'>{props.name}</div>
-      <div>{props.keys}</div>
-      <div className='amount size'>{props.amount}</div>
-     {show ? (<button className='btn size' onClick={()=> button(1)} >Add to cart</button>) :  (<button className='btn size' onClick={()=>button(-1)}>Remove form cart</button>)}
-      <div>{count}</div>
-    </div>
+    <div className='container'>
+    <h1 className="title">Welcome to Noorul's Shop</h1>
+    <h2 className='count'>Your Cart Count is {count} </h2>
+   
+      <div className='item'>
+     {   data.map((each,idx)=>(
+           <div className="Card" key={idx}>
+           <img src= {each.url}/>
+           <div className='name size'>{each.product}</div>
+           <div className='amount size'>{each.amount}</div>
+          <button id={each.product}  className='btn size add' onClick={()=> handleAdd(each.product,each.amount)} >Add to cart</button> 
+          <button id={each.amount} className='btn size' onClick={()=>handleRemove(each.product,each.amount)}>Remove form cart</button>
+          </div>
+ ))
+} 
+          </div>
+         
+         </div>   
+       
   )
 }
-
-export default App;
