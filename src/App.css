@@ -1,28 +1,27 @@
-body{
+body {
   background-color: black;
   color: greenyellow;
 }
 .App {
   text-align: center;
- 
 }
-.size{
+.size {
   font-size: larger;
 }
-.add{
+.add {
   width: 7rem !important;
 }
-.btn{
+.btn {
   border-radius: 5rem;
   background-color: coral;
   width: 11rem;
   color: whitesmoke;
 }
-.btn:hover{
+.btn:hover {
   color: coral;
   background-color: whitesmoke;
 }
-.item{
+.item {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,21 +29,21 @@ body{
   gap: 1rem;
   margin-top: 2rem;
 }
-img{
+img {
   height: 10rem;
-  width: 20rem ;
+  width: 20rem;
   border-radius: 1rem;
 }
-.Card:hover{
-box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
+.Card:hover {
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
 }
-.title{
+.title {
   /* animation-duration: 3s; */
   /* animation-iteration-count: infinite; */
   animation-name: title;
   letter-spacing: 0.5rem;
 }
-.count{
+.count {
   /* animation-duration: 5s; */
   /* animation-iteration-count: infinite; */
   animation-name: count;
@@ -55,15 +54,13 @@ box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
   }
 
   to {
-   
-   text-align: center;
+    text-align: center;
     color: pink;
-
   }
 }
 @keyframes count {
   from {
-    margin-left : 100%;
+    margin-left: 100%;
     width: 300%;
     color: coral;
   }
@@ -72,6 +69,5 @@ box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem whitesmoke;
     margin-right: 0%;
     width: 100%;
     color: aliceblue;
-
   }
 }
